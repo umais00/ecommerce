@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Now!</title>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <!-- font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+
+    body > *,
+    body > * > * {
+      margin-bottom: 2vh;
+    }
+
+    .main {
+      margin: 0 10vw;
+    }
+
+    .main h1 {
+      font-weight: bold;
+    }
+
+    #offer {
+      height: 2.2rem;
+      background-color: var(--orange);
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+    }
+
+    .heading {
+      display: flex;
+    }
+    .heading a {
+      font-size: 2rem;
+      height: max-content;
+      align-self: center;
+      color: orange;
+    }
+    .heading a:hover {
+      color: lightsalmon;
+    }
+
+    .s-headings {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid lightgrey;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .s-headings .f {
+      width: 70%;
+    }
+
+    @scope (.items) {
+      :scope {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 1px solid lightgrey;
+      }
+
+      .product {
+        width: 66%;
+        display: flex;
+        height: max-content;
+
+        .p-image {
+          border: 2px solid var(--orange);
+          width: 33%;
+          height: 84%;
+          display: grid;
+          place-items: center;
+          background-color: #fff;
+
+          img {
+            height: 50%;
+          }
+        }
+
+        span {
+          margin: auto 0 auto 5vw;
+          font-size: 1.2rem;
+          color: #e77d18;
+        }
+      }
+    }
+
+    .price {
+      margin: auto 0;
+      font-size: 1.2rem;
+      width: 11.5%;
+      display: flex;
+      justify-content: end;
+    }
+
+    input[type="number"] {
+      width: 2rem;
+      height: 2rem;
+      margin: auto 0;
+      margin-left: 3%;
+    }
+
+    .also-bought {
+      border-bottom: 1px solid lightgrey;
+    }
+
+    .grand-total {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .grand-total h1 {
+      display: contents;
+    }
+    @media (max-width: 992px) {
+      .p-image {
+        border: 2px solid var(--orange) !important;
+        width: 150px !important;
+        height: 150px !important;
+        display: flex !important;
+        align-items: center !important;
+        background-color: #fff !important;
+        justify-content: center;
+      }
+      .grand-total {
+        align-items: center;
+      }
+      .center,
+      .center > *,
+      .center > * > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+
+  <body>
+    <header id="offer">
+      <p>Enjoy 20% off only for today🔥</p>
+    </header>
+    <main class="main">
+      <div class="heading">
+        <a href="index.html">
+          <i class="fa-solid fa-arrow-rotate-left"></i>
+        </a>
+        &nbsp;&nbsp;&nbsp;
+
+        <h1>Cart</h1>
+      </div>
+      <div class="s-headings">
+        <span class="f">CART ITEMS</span>
+        <span>PRICE</span>
+        <span>QUANTITY</span>
+        <span>SUBTOTAL</span>
+      </div>
+      <div class="items">
+        <div class="product">
+          <div class="p-image">
+            <img src="images/w1.png" alt="" />
+          </div>
+          <span>men watch zaxon 2024</span>
+        </div>
+        <div class="price">$<span id="price">45.00</span></div>
+        <input type="number" id="quantity" value="1" min="1" />
+        <div class="price subtotal">
+          <p>$45.00</p>
+        </div>
+      </div>
+      <section class="product_section also-bought center">
+        <h1>people also bought:</h1>
+        <div class="product_container" style="justify-content: flex-start">
+          <div class="box">
+            <div class="box-content">
+              <div class="img-box">
+                <img src="images/w8.png" alt="" />
+              </div>
+              <div class="detail-box">
+                <div class="text">
+                  <h6>Men's Watch</h6>
+                  <h5><span>$</span> 300</h5>
+                </div>
+                <div class="like">
+                  <h6>Like</h6>
+                  <div class="star_container">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href=""> Add To Cart </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-content">
+              <div class="img-box">
+                <img src="images/w2.png" alt="" />
+              </div>
+              <div class="detail-box">
+                <div class="text">
+                  <h6>Men's Watch</h6>
+                  <h5><span>$</span> 300</h5>
+                </div>
+                <div class="like">
+                  <h6>Like</h6>
+                  <div class="star_container">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href=""> Add To Cart </a>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-content">
+              <div class="img-box">
+                <img src="images/w3.png" alt="" />
+              </div>
+              <div class="detail-box">
+                <div class="text">
+                  <h6>Men's Watch</h6>
+                  <h5><span>$</span> 300</h5>
+                </div>
+                <div class="like">
+                  <h6>Like</h6>
+                  <div class="star_container">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-box">
+              <a href=""> Add To Cart </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="grand-total">
+        <p id="message">you are really close to getting that free delivery🔥</p>
+        <p id="rmn">$45 out of $100</p>
+        <progress
+          id="progress"
+          value="95"
+          max="100"
+          style="color: orange"
+        ></progress>
+
+        <h2 id="shipping">shipping : $50</h2>
+        <h1>
+          grand total:
+          <h1 id="gt"></h1>
+        </h1>
+      </section>
+    </main>
+  </body>
+  <script>
+    let priceElement = document.getElementById("price");
+    let quantityInput = document.getElementById("quantity");
+    let subtotalElement = document.querySelector(".subtotal p");
+    let grandTotalElement = document.getElementById("gt");
+    let progressElement = document.getElementById("progress");
+    let messageElement = document.getElementById("message");
+    let shippingElement = document.getElementById("shipping");
+    let remainingElement = document.getElementById("rmn");
+
+    function updateTotals() {
+      let price = parseFloat(priceElement.innerHTML);
+      let quantity = parseFloat(quantityInput.value);
+      let subtotal = price * quantity;
+      let shipping = 50;
+      if (subtotal >= 100) {
+        shipping = 0;
+        messageElement.innerHTML = "Hurray! You have free shipping now!";
+        remainingElement.innerHTML = "";
+      } else {
+        shipping = 50;
+        messageElement.innerHTML =
+          "you are really close to getting that free delivery🔥";
+        remainingElement.innerHTML = `$${(100 - subtotal).toFixed(
+          2
+        )} out of $100`;
+      }
+      let grandTotal = subtotal + shipping;
+
+      subtotalElement.innerHTML = `$${subtotal.toFixed(2)}`;
+      grandTotalElement.innerHTML = `$${grandTotal.toFixed(2)}`;
+      progressElement.value = subtotal;
+      shippingElement.innerHTML = `shipping : $${shipping}`;
+    }
+
+    quantityInput.addEventListener("change", updateTotals);
+
+    // Initialize grand total on page load
+    updateTotals();
+  </script>
+</html>
